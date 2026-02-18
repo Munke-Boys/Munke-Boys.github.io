@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Munke - The YouTube Channel</title>
+    <!-- Importing Bangers from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #f4f4f4; color: #333; overflow-x: hidden; }
+        h1, h2 { font-family: 'Bangers', cursive; letter-spacing: 2px; }
+        
+        /* Header - original gangster Munke image */
+        header { 
+            position: relative;
+            background-image: url('https://i.postimg.cc/QxMcJ0H7/MUNKE.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #fff; 
+            text-align: center; 
+            padding: 200px 20px; 
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        
+        /* Dark overlay for text legibility */
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(0,0,0,0.45);
+            z-index: 1;
+        }
+        
+        /* Header content above overlay */
+        header > * {
+            position: relative;
+            z-index: 3;
+        }
+        
+        header h1 { font-size: 7em; margin: 0; text-shadow: 6px 6px 15px rgba(0,0,0,0.9); opacity: 0; animation: fadeInDown 1.5s ease forwards; }
+        header p { font-family: 'Bangers', cursive; font-size: 3.5em; margin: 30px 0; text-shadow: 4px 4px 10px rgba(0,0,0,0.9); opacity: 0; animation: fadeInDown 1.5s ease 0.5s forwards; }
+        .subscribe { 
+            display: inline-block; 
+            background: #ff0000; 
+            color: #fff; 
+            padding: 20px 50px; 
+            text-decoration: none; 
+            border-radius: 50px; 
+            font-family: 'Bangers', cursive; 
+            font-size: 2em; 
+            margin-top: 40px; 
+            box-shadow: 0 6px 20px rgba(255,0,0,0.5);
+            opacity: 0;
+            animation: fadeInDown 1.5s ease 1s forwards, pulse 2s infinite 2s;
+            transition: transform 0.3s ease, background 0.3s ease; 
+        }
+        .subscribe:hover { background: #cc0000; transform: scale(1.15); }
+
+        /* Scroll reveal animations */
+        .about, .videos h2, .videos, .community { opacity: 0; transform: translateY(50px); transition: opacity 1s ease, transform 1s ease; }
+        .reveal { opacity: 1; transform: translateY(0); }
+
+        /* Video hover effect */
+        iframe { 
+            width: 100%; 
+            aspect-ratio: 16/9; 
+            border: none; 
+            border-radius: 10px; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2); 
+            transition: transform 0.4s ease, box-shadow 0.4s ease; 
+        }
+        iframe:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(255,0,0,0.4); }
+
+        .container { max-width: 1200px; margin: 60px auto; padding: 20px; text-align: center; }
+        .about, .community { background: #fff; padding: 50px; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.15); margin-bottom: 50px; }
+        .about h2, .community h2 { font-size: 3.5em; margin-top: 0; }
+
+        /* Profile picture in About section */
+        .profile-pic {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 30px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            border: 5px solid #ff0000;
+        }
+
+        .videos h2 { font-size: 3.5em; }
+        .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+        
+        /* Discord Widget */
+        .discord-widget { width: 100%; max-width: 400px; margin: 20px auto; }
+
+        footer { background: #333; color: #fff; text-align: center; padding: 40px; font-size: 1.1em; }
+
+        /* Keyframe animations */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 6px 20px rgba(255,0,0,0.5); }
+            50% { box-shadow: 0 6px 30px rgba(255,0,0,0.8); }
+            100% { box-shadow: 0 6px 20px rgba(255,0,0,0.5); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Munke</h1>
+        <p>Welcome to THE YouTube Channel – Where we do it all!</p>
+        <a href="https://www.youtube.com/channel/UCbHdlk62mzbwCHFunOPWVyQ?sub_confirmation=1" class="subscribe" target="_blank">Subscribe Now</a>
+    </header>
+
+    <div class="container">
+        <div class="about">
+            <h2>About the Channel</h2>
+            <img src="https://i.postimg.cc/Pf71K1Z3/Munke-pfp.jpg" alt="Munke Profile Picture" class="profile-pic">
+            <p>Step into the world of Munke – the ultimate vibe where entertainment, chaos, and pure brilliance collide. From epic gaming sessions to wild reactions, tutorials, vlogs, and everything in between – we truly do it all. Join the crew, hit subscribe, and let's make history!</p>
+        </div>
+
+        <h2>Featured Videos</h2>
+        <div class="videos">
+            <iframe src="https://www.youtube.com/embed/9HNRbVUVzvI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/KMaVjNcgDa8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/rR20ukJ0LoE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe src="https://www.youtube.com/embed/XlGZPrKt9ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+
+        <p style="margin-top: 50px;"><a href="https://www.youtube.com/channel/UCbHdlk62mzbwCHFunOPWVyQ/videos" target="_blank" style="font-size: 1.4em; color: #ff0000; text-decoration: none; font-weight: bold; font-family: 'Bangers', cursive;">View All Videos on YouTube →</a></p>
+
+        <!-- Discord Community Section -->
+        <div class="community">
+            <h2>Join the Munke Discord Crew!</h2>
+            <p>Hang out, chat chaos, share memes, and get exclusive updates. Who's online right now?</p>
+            <div class="discord-widget">
+                <iframe src="https://discord.com/widget?id=1457606920973062166&theme=dark" width="100%" height="500" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 Munke. All rights reserved. | <a href="https://www.youtube.com/channel/UCbHdlk62mzbwCHFunOPWVyQ" style="color: #fff; text-decoration: none;">YouTube Channel</a></p>
+    </footer>
+
+    <!-- Simple scroll reveal script -->
+    <script>
+        const reveals = document.querySelectorAll('.about, .videos h2, .videos, .community');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
