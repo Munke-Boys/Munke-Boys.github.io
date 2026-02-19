@@ -63,7 +63,7 @@
         .subscribe:hover { background: #cc0000; transform: scale(1.15); }
 
         /* Scroll reveal animations */
-        .about, .videos h2, .videos, .community { opacity: 0; transform: translateY(50px); transition: opacity 1s ease, transform 1s ease; }
+        .about, .videos h2, .videos, .crew, .community { opacity: 0; transform: translateY(50px); transition: opacity 1s ease, transform 1s ease; }
         .reveal { opacity: 1; transform: translateY(0); }
 
         /* Video hover effect */
@@ -78,8 +78,8 @@
         iframe:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(255,0,0,0.4); }
 
         .container { max-width: 1200px; margin: 60px auto; padding: 20px; text-align: center; }
-        .about, .community { background: #fff; padding: 50px; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.15); margin-bottom: 50px; }
-        .about h2, .community h2 { font-size: 3.5em; margin-top: 0; }
+        .about, .community, .crew { background: #fff; padding: 50px; border-radius: 15px; box-shadow: 0 0 30px rgba(0,0,0,0.15); margin-bottom: 50px; }
+        .about h2, .community h2, .crew h2 { font-size: 3.5em; margin-top: 0; }
 
         /* Profile picture in About section */
         .profile-pic {
@@ -95,6 +95,55 @@
         .videos h2 { font-size: 3.5em; }
         .videos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
         
+        /* Crew Section */
+        .crew h2 { font-size: 4em; margin-bottom: 10px; }
+        .crew-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 30px;
+        }
+        .crew-member {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 30px 20px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(40px);
+        }
+        .crew-member.reveal { opacity: 1; transform: translateY(0); }
+        .crew-member:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 12px 35px rgba(255,0,0,0.25);
+        }
+        .member-placeholder {
+            width: 140px;
+            height: 140px;
+            background: #ddd;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            border: 4px solid #ff0000;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+        }
+        .crew-member h3 {
+            font-family: 'Bangers', cursive;
+            font-size: 2.4em;
+            margin: 10px 0 8px;
+            color: #222;
+        }
+        .role {
+            font-size: 1.3em;
+            color: #ff0000;
+            margin: 0 0 18px;
+            font-weight: bold;
+        }
+        .bio {
+            font-size: 1.1em;
+            line-height: 1.6;
+            color: #444;
+        }
+
         /* Discord Widget */
         .discord-widget { width: 100%; max-width: 400px; margin: 20px auto; }
 
@@ -134,6 +183,48 @@
             <iframe src="https://www.youtube.com/embed/XlGZPrKt9ok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
 
+        <!-- The Munke Crew Section -->
+        <div class="crew">
+            <h2>The Munke Crew</h2>
+            <p style="font-size: 1.4em; margin: 20px 0 40px;">The chaotic masterminds behind the madness. Meet the squad that makes it all happen.</p>
+            
+            <div class="crew-grid">
+
+                <!-- Chris -->
+                <div class="crew-member">
+                    <img src="https://i.postimg.cc/2SFt7LwT/me_face.png" alt="Chris" class="profile-pic" style="width:140px; height:140px; object-fit:cover; border-radius:50%;">
+                    <h3>Chris</h3>
+                    <p class="role">Chaos Coordinator / Reaction King</p>
+                    <p class="bio">The guy who can turn a casual stream into an absolute fever dream with one perfectly timed scream. Master of escalating situations, professional vibe checker, and the only one brave enough to eat whatever cursed snack the chat dares him to. Irreplaceable energy—pure Munke fuel.</p>
+                </div>
+
+                <!-- Dominic – refined centering & fill -->
+                <div class="crew-member">
+                    <img src="https://i.postimg.cc/SsXV3n6s/doms_head.png" alt="Dominic" class="profile-pic" style="width:140px; height:140px; object-fit:cover; border-radius:50%; object-position: center 35%;">
+                    <h3>Dominic</h3>
+                    <p class="role">Hype Catalyst / Meme Alchemist</p>
+                    <p class="bio">The human embodiment of escalation. One second he's chilling, the next he's turning a quiet moment into legendary pandemonium with a single unhinged reaction or perfectly cursed edit. Master of the dramatic zoom-in, king of chat-roasting, and the reason half the clips go viral. Without Dom, the vibes would be suspiciously calm.</p>
+                </div>
+
+                <!-- Jacob – refined centering & fill -->
+                <div class="crew-member">
+                    <img src="https://i.postimg.cc/QN9nnym9/jew_head.png" alt="Jacob" class="profile-pic" style="width:140px; height:140px; object-fit:cover; border-radius:50%; object-position: center 45%;">
+                    <h3>Jacob</h3>
+                    <p class="role">Wildcard Wrangler / Edit Sorcerer</p>
+                    <p class="bio">The quiet storm before the hurricane. One innocent comment from Jacob can spiral the entire stream into glorious, unrecoverable madness. Master of the perfectly timed edit, keeper of the forbidden soundboard, and the guy who somehow always knows where the bodies are buried (metaphorically... mostly). Calculated insanity personified.</p>
+                </div>
+
+                <!-- Luke -->
+                <div class="crew-member">
+                    <img src="https://i.postimg.cc/BnqpsYTH/luke_face.png" alt="Luke" class="profile-pic" style="width:140px; height:140px; object-fit:cover; border-radius:50%;">
+                    <h3>Luke</h3>
+                    <p class="role">Chill Instigator / Deadpan Destroyer</p>
+                    <p class="bio">The calm before, during, and after the storm. Luke drops one dry, perfectly timed line and suddenly the entire stream is spiraling into beautiful anarchy. Master of the understated roast, king of the unreadable poker face, and the guy who can make even the most cursed idea sound reasonable... right before it implodes spectacularly. Quiet power, maximum damage.</p>
+                </div>
+
+            </div>
+        </div>
+
         <p style="margin-top: 50px;"><a href="https://www.youtube.com/channel/UCbHdlk62mzbwCHFunOPWVyQ/videos" target="_blank" style="font-size: 1.4em; color: #ff0000; text-decoration: none; font-weight: bold; font-family: 'Bangers', cursive;">View All Videos on YouTube →</a></p>
 
         <!-- Discord Community Section -->
@@ -152,7 +243,7 @@
 
     <!-- Simple scroll reveal script -->
     <script>
-        const reveals = document.querySelectorAll('.about, .videos h2, .videos, .community');
+        const reveals = document.querySelectorAll('.about, .videos h2, .videos, .crew, .crew-member, .community');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
